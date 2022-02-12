@@ -1,6 +1,6 @@
 # Emulate OpenGL
 
-![example workflow](https://github.com/ahmedhussein89/EmulateOpenGL/actions/workflows/linux.yml/badge.svg)
+![Linux](https://github.com/ahmedhussein89/EmulateOpenGL/actions/workflows/linux.yml/badge.svg)
 
 The idea of the project is to understand the inner implementation of OpenGL.
 
