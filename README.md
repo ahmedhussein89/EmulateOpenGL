@@ -1,5 +1,7 @@
 # Emulate OpenGL
 
+![example workflow](https://github.com/ahmedhussein89/EmulateOpenGL/actions/workflows/linux.yml/badge.svg)
+
 The idea of the project is to understand the inner implementation of OpenGL.
 
 <div style="text-align: right">
