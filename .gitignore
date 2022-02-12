@@ -1,3 +1,10 @@
 # visual studio
 CMakeSettings.json
 .vs/
+
+# compile commands
+compile_commands.json
+
+# clangd
+.cache/
+
