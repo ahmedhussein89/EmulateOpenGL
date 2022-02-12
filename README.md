@@ -1,6 +1,7 @@
 # Emulate OpenGL
 
 ![Linux](https://github.com/ahmedhussein89/EmulateOpenGL/actions/workflows/linux.yml/badge.svg)
+![Windows](https://github.com/ahmedhussein89/EmulateOpenGL/actions/workflows/windows.yml/badge.svg)
 
 The idea of the project is to understand the inner implementation of OpenGL.
 
