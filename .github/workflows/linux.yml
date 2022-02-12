@@ -9,8 +9,8 @@ jobs:
       matrix:
         cxx: [g++-11, clang++-11]
         build_type: [Debug, Release]
-        std: [11]
-        os: [ubuntu-18.04]
+        std: [17]
+        os: [ubuntu-20.04]
         include:
           - cxx: g++-11
             build_type: Release
@@ -23,20 +23,17 @@ jobs:
             os: ubuntu-20.04
             install: sudo apt install g++-11
           - cxx: clang++-11
-            build_type: Debug
-            std: 17
-            os: ubuntu-20.04
-          - cxx: clang++-11
             build_type: Release
             std: 17
+            cxxflags: -stdlib=libc++
             os: ubuntu-20.04
+            install: sudo apt install clang-11 libc++-11-dev libc++abi-11-dev
           - cxx: clang++-11
             build_type: Debug
             std: 17
             cxxflags: -stdlib=libc++
             os: ubuntu-20.04
-            install: sudo apt install libc++-11-dev libc++abi-11-dev
-          - shared: -DBUILD_SHARED_LIBS=ON
+            install: sudo apt install clang-11 libc++-11-dev libc++abi-11-dev
 
     steps:
     - uses: actions/checkout@v2
@@ -44,7 +41,7 @@ jobs:
     - name: Create Build Environment
       run: |
         ${{matrix.install}}
-        sudo apt install locales-all
+        sudo apt install locales-all cmake
         cmake -E make_directory ${{runner.workspace}}/build
     - name: Configure
       working-directory: ${{runner.workspace}}/build
